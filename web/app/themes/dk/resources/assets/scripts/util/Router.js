@@ -55,6 +55,8 @@ class Router {
         this.fire(className, 'finalize');
       });
 
+      console.log("CLASSNAME", document.body.className)
+
     // Fire common finalize JS
     this.fire('common', 'finalize');
   }
