@@ -3,7 +3,8 @@
   @include('partials.head')
   <body @php(body_class())>
     @php(do_action('get_header'))
-    <div role="document">
+    @include('partials.home.header')
+    <div role="document" class="homeContent">
       @yield('content')
     </div>
 

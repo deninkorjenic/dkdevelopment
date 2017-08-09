@@ -1,7 +1,45 @@
-.banner .nav li {
-  @extend .nav-item;
+.preloader {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+
+  &.hide-preloader {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  &-anim {
+    width: 50px;
+    height: 50px;
+    border-radius: 45px;
+    background-color: white;
+    animation-name: preloaderanim;
+    animation-duration: 2s;
+    animation-delay: 0;
+    animation-iteration-count: infinite;
+    animation-direction: forward;
+  }
 }
 
-.banner .nav a {
-  @extend .nav-link;
+@keyframes preloaderanim {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(0.7);
+  }
+
+  10% {
+    transform: scale(1);
+  }
 }
